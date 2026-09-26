@@ -1,32 +1,1117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page-trang chủ</title>
+
+    <title>Chúc Mừng Năm Mới 2027 - Nguyễn Minh Hiếu</title>
+
+    <style>
+
+        /* =========================
+           CÀI ĐẶT CHUNG
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5e8;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           THANH MENU
+        ========================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            height: 65px;
+
+            background: #071d45;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 40px;
+
+            box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+
+            padding: 12px 18px;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background: #ff4057;
+        }
+
+
+        /* =========================
+           PHẦN HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 50% 20%, #243e80, #071b42 70%);
+        }
+
+        /* ngôi sao */
+
+        .stars {
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                radial-gradient(white 1px, transparent 1px),
+                radial-gradient(#ffd76a 1px, transparent 1px);
+
+            background-size: 80px 80px, 120px 120px;
+
+            opacity: 0.7;
+        }
+
+        /* pháo hoa */
+
+        .firework {
+            position: absolute;
+
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle,
+                transparent 10%,
+                #ffdf65 11%,
+                transparent 13%);
+
+            animation: boom 2s infinite;
+        }
+
+        .f1 {
+            left: 10%;
+            top: 20%;
+        }
+
+        .f2 {
+            right: 12%;
+            top: 25%;
+
+            animation-delay: 0.8s;
+        }
+
+        .f3 {
+            left: 70%;
+            top: 50%;
+
+            animation-delay: 1.3s;
+        }
+
+        @keyframes boom {
+
+            0% {
+                transform: scale(0.2);
+                opacity: 0;
+            }
+
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+
+        }
+
+
+        /* =========================
+           HOA HAI BÊN
+        ========================= */
+
+        .flower {
+            position: absolute;
+
+            font-size: 100px;
+
+            animation: swing 3s infinite ease-in-out;
+        }
+
+        .flower-left {
+            left: 10px;
+            top: 70px;
+        }
+
+        .flower-right {
+            right: 10px;
+            top: 70px;
+        }
+
+        @keyframes swing {
+
+            0%, 100% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+
+        }
+
+
+        /* =========================
+           NỘI DUNG HERO
+        ========================= */
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+
+            color: #ffe38b;
+
+            font-size: 60px;
+
+            text-shadow:
+                0 0 10px #ffcc4d,
+                0 0 30px #ff9d00;
+
+            margin-bottom: 10px;
+        }
+
+        .year {
+            position: relative;
+            z-index: 2;
+
+            font-size: 150px;
+            font-weight: bold;
+
+            color: #ffd75c;
+
+            text-shadow:
+                5px 5px 0 #c52121,
+                0 0 30px #ff9d00;
+
+            letter-spacing: 10px;
+        }
+
+        .wish {
+            position: relative;
+            z-index: 2;
+
+            color: white;
+
+            font-size: 22px;
+
+            line-height: 1.7;
+
+            margin: 10px;
+        }
+
+
+        /* =========================
+           TÊN NGƯỜI
+        ========================= */
+
+        .name-box {
+            position: relative;
+            z-index: 3;
+
+            margin-top: 20px;
+
+            padding: 20px 70px;
+
+            background: #fff5df;
+
+            border: 5px solid #d71920;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 0 20px rgba(255,200,50,0.7);
+        }
+
+        .name {
+            color: #c51e2b;
+
+            font-size: 40px;
+
+            font-weight: bold;
+        }
+
+        .address {
+            color: #d71920;
+
+            font-size: 25px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           NÚT NHẠC
+        ========================= */
+
+        .music-box {
+
+            margin-top: 25px;
+
+            position: relative;
+            z-index: 5;
+
+            background: white;
+
+            padding: 15px 25px;
+
+            border-radius: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .music-button {
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            border: none;
+
+            background: #ef3340;
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+        .music-button:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           ĐẾM NGƯỢC
+        ========================= */
+
+        .countdown-section {
+
+            margin: 40px auto;
+
+            max-width: 1050px;
+
+            padding: 30px;
+
+            background: #ffece6;
+
+            border: 2px solid #ffb5a9;
+
+            border-radius: 25px;
+
+            text-align: center;
+        }
+
+        .countdown-section h2 {
+            color: #c7192b;
+
+            margin-bottom: 25px;
+        }
+
+        .countdown {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .time {
+
+            min-width: 120px;
+
+            padding: 20px;
+
+            background: #ed3346;
+
+            color: white;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+        }
+
+        .time span {
+
+            display: block;
+
+            font-size: 35px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CÁC LỜI CHÚC
+        ========================= */
+
+        .wishes {
+
+            max-width: 1100px;
+
+            margin: 40px auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+
+            padding: 20px;
+        }
+
+        .wish-card {
+
+            background: white;
+
+            padding: 30px 15px;
+
+            text-align: center;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .wish-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .wish-icon {
+
+            font-size: 45px;
+
+            margin-bottom: 10px;
+        }
+
+        .wish-card h3 {
+
+            color: #d51f30;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+
+            max-width: 1100px;
+
+            margin: 50px auto;
+
+            padding: 20px;
+        }
+
+        .gallery h2 {
+
+            color: #c7192b;
+
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 15px;
+        }
+
+        .gallery-item {
+
+            height: 180px;
+
+            border-radius: 15px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 60px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffcf4b,
+                    #e72c3b
+                );
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.2);
+
+            transition: 0.3s;
+
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           LỜI CHÚC CUỐI TRANG
+        ========================= */
+
+        footer {
+
+            background: #071d45;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 50px 20px;
+
+            font-size: 20px;
+        }
+
+        footer .heart {
+
+            font-size: 35px;
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           NÚT LÊN ĐẦU TRANG
+        ========================= */
+
+        #topButton {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 50px;
+            height: 50px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #ed3346;
+
+            color: white;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 999;
+        }
+
+
+        /* =========================
+           RESPONSIVE - ĐIỆN THOẠI
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .menu a {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .year {
+                font-size: 90px;
+            }
+
+            .name {
+                font-size: 27px;
+            }
+
+            .address {
+                font-size: 20px;
+            }
+
+            .name-box {
+                padding: 15px 25px;
+            }
+
+            .wishes {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .gallery-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+    </style>
 </head>
+
+
 <body>
-  <!-- 
-    Ghi chú - không hiển thị trên web 
-    cú pháp HtML:
-     <tên_thẻ thuộc_tính> nội dung </tên_thẻ >
-     </tên_thẻ thuộc tính_tính: thẻ mở
-     </tên_thẻ>: thẻ đóng
-     -->
-    <h1>Heading1</h1>
-    <h2>Heading2</h2>
-    <h3>Heading3</h3>
-    <h4>Heading4</h4> 
-    <p>Paragraph- Đoạn văn bản</p>
-    <b>Bold:in đậm</b><br>
-    <i>Italic:in nghiêng</i><br>
-    <u>Underline: gạch chân</u><br>
-    <big>lớn hơn so với đoạn văn bản bình thường</big>
-    <small>nhỏ hơn so với đoạn văn bản bình thường</small>
-    <p>H<sub>2</sub>O</p>
-    <p>Pi *R<sup>2</sup></p>
-    <p>&copy; 2023 My Website. All rights reserved.</p>
-    <p>£ : b bảng anh </p>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            🌸 Chúc Mừng Năm Mới 2027
+        </div>
+
+        <div class="menu">
+
+            <a href="#home">🏠 Trang chủ</a>
+
+            <a href="#wishes">❤️ Lời chúc</a>
+
+            <a href="#gallery">📸 Ảnh đẹp</a>
+
+            <a href="#music">🎵 Nghe nhạc</a>
+
+            <a href="#countdown">⏰ Đếm ngược</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         PHẦN CHÍNH
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="stars"></div>
+
+        <div class="firework f1"></div>
+        <div class="firework f2"></div>
+        <div class="firework f3"></div>
+
+
+        <div class="flower flower-left">
+            🌸🌼
+        </div>
+
+        <div class="flower flower-right">
+            🌼🌸
+        </div>
+
+
+        <h1>
+            🎊 Chúc Mừng Năm Mới 🎊
+        </h1>
+
+
+        <div class="year">
+            2027
+        </div>
+
+
+        <div class="wish">
+
+            Kính chúc bạn và gia đình một năm mới
+
+            <br>
+
+            ❤️ Sức khỏe - Hạnh phúc - Thành công - May mắn ❤️
+
+        </div>
+
+
+        <!-- TÊN -->
+
+        <div class="name-box">
+
+            <div class="name">
+                Nguyễn Minh Hiếu
+            </div>
+
+            <div class="address">
+                - Vua Máy Tính Đời Thứ 20 DNU -
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             AUDIO
+        ========================= -->
+
+        <div class="music-box" id="music">
+
+            <button
+                class="music-button"
+                onclick="toggleMusic()"
+            >
+                ▶
+            </button>
+
+            <div>
+
+                <strong>
+                    🎵 Nhạc Tết 2027
+                </strong>
+
+                <br>
+
+                <small>
+                    Mang không khí xuân về nhà
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         ĐẾM NGƯỢC
+    ========================= -->
+
+    <section
+        class="countdown-section"
+        id="countdown"
+    >
+
+        <h2>
+            ⏰ Đếm ngược đến năm 2027
+        </h2>
+
+        <div class="countdown">
+
+            <div class="time">
+                <span id="days">0</span>
+                Ngày
+            </div>
+
+            <div class="time">
+                <span id="hours">0</span>
+                Giờ
+            </div>
+
+            <div class="time">
+                <span id="minutes">0</span>
+                Phút
+            </div>
+
+            <div class="time">
+                <span id="seconds">0</span>
+                Giây
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LỜI CHÚC
+    ========================= -->
+
+    <section
+        class="wishes"
+        id="wishes"
+    >
+
+        <div class="wish-card">
+
+            <div class="wish-icon">
+                🎁
+            </div>
+
+            <h3>
+                Sức khỏe
+            </h3>
+
+            <p>
+                Luôn mạnh khỏe,
+                tràn đầy năng lượng.
+            </p>
+
+        </div>
+
+
+        <div class="wish-card">
+
+            <div class="wish-icon">
+                ❤️
+            </div>
+
+            <h3>
+                Hạnh phúc
+            </h3>
+
+            <p>
+                Luôn mỉm cười,
+                vui vẻ mỗi ngày.
+            </p>
+
+        </div>
+
+
+        <div class="wish-card">
+
+            <div class="wish-icon">
+                ⭐
+            </div>
+
+            <h3>
+                Thành công
+            </h3>
+
+            <p>
+                Đạt được những
+                mục tiêu trong năm mới.
+            </p>
+
+        </div>
+
+
+        <div class="wish-card">
+
+            <div class="wish-icon">
+                🪙
+            </div>
+
+            <h3>
+                Tài lộc
+            </h3>
+
+            <p>
+                Tiền vào như nước,
+                công việc thuận lợi.
+            </p>
+
+        </div>
+
+
+        <div class="wish-card">
+
+            <div class="wish-icon">
+                🌿
+            </div>
+
+            <h3>
+                Bình an
+            </h3>
+
+            <p>
+                Gia đình yên ấm,
+                mọi sự tốt lành.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section
+        class="gallery"
+        id="gallery"
+    >
+
+        <h2>
+            📸 Những khoảnh khắc đẹp ngày Tết
+        </h2>
+
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                🎆
+            </div>
+
+            <div class="gallery-item">
+                🌼
+            </div>
+
+            <div class="gallery-item">
+                🏮
+            </div>
+
+            <div class="gallery-item">
+                🌄
+            </div>
+
+            <div class="gallery-item">
+                🍉
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            🌸 Chúc Nguyễn Minh Hiếu - Hải Dương 🌸
+        </p>
+
+        <p>
+            Một năm 2027 thật tuyệt vời!
+        </p>
+
+        <div class="heart">
+            ❤️ 🎊 ❤️
+        </div>
+
+    </footer>
+
+
+    <!-- NÚT LÊN ĐẦU -->
+
+    <button
+        id="topButton"
+        onclick="window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })"
+    >
+        ↑
+    </button>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* =========================
+           ĐẾM NGƯỢC
+        ========================= */
+
+        const newYear =
+            new Date("January 1, 2027 00:00:00").getTime();
+
+
+        function countdown() {
+
+            const now =
+                new Date().getTime();
+
+            const distance =
+                newYear - now;
+
+
+            if (distance <= 0) {
+
+                document.getElementById("days")
+                    .innerText = "0";
+
+                document.getElementById("hours")
+                    .innerText = "0";
+
+                document.getElementById("minutes")
+                    .innerText = "0";
+
+                document.getElementById("seconds")
+                    .innerText = "0";
+
+                return;
+            }
+
+
+            const days =
+                Math.floor(
+                    distance /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            const hours =
+                Math.floor(
+                    (distance %
+                        (1000 * 60 * 60 * 24))
+                    /
+                    (1000 * 60 * 60)
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (distance %
+                        (1000 * 60 * 60))
+                    /
+                    (1000 * 60)
+                );
+
+
+            const seconds =
+                Math.floor(
+                    (distance %
+                        (1000 * 60))
+                    /
+                    1000
+                );
+
+
+            document.getElementById("days")
+                .innerText = days;
+
+            document.getElementById("hours")
+                .innerText = hours;
+
+            document.getElementById("minutes")
+                .innerText = minutes;
+
+            document.getElementById("seconds")
+                .innerText = seconds;
+
+        }
+
+
+        setInterval(countdown, 1000);
+
+        countdown();
+
+
+
+        /* =========================
+           NÚT LÊN ĐẦU TRANG
+        ========================= */
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                const button =
+                    document.getElementById(
+                        "topButton"
+                    );
+
+                if (window.scrollY > 300) {
+
+                    button.style.display =
+                        "block";
+
+                } else {
+
+                    button.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+    </script>
+
 
 </body>
 </html>
